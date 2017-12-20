@@ -45,6 +45,16 @@ angular
           });
         });
     };
+    
+    $scope.borrado = function(producto) {
+      Producto.deleteById({id:producto.id})
+        .$promise
+        .then(function(response) {
+          $scope.productos = Producto.find({
+            filter: {"order": "comprar DESC"}
+          });
+        });
+    };
 
   }])
  ;

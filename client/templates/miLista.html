@@ -11,7 +11,10 @@
         <ion-item ng-repeat="producto in productos.slice()">
           <ion-checkbox ng-checked="producto.comprar" ng-click="comprado(producto)">
             <ion-label>{{producto.nombre}}</ion-label>
+              
           </ion-checkbox>
+            
+           <button id="miLista-button21" ng-click="borrado(producto)" class="button button-balanced button-small" style=" background-color: red">Borrar</button> 
         </ion-item>
     </ion-list>
     <button id="miLista-button20" ng-click="todoComprado()" class="button button-balanced button-small button-block">Todo comprado</button>
